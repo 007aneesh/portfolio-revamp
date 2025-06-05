@@ -21,13 +21,13 @@ const CTA = () => {
           >
             Contact Me
           </Link>
-          <a
-            href="https://drive.google.com/uc?id=1DB4Z1-gKTDQ6Q1_l-BkJhRXuBo1LOs15&export=download"
+          {/* <a
+            href=""
             download
             className="px-8 py-4 bg-transparent border border-white/30 backdrop-blur-sm text-white rounded-lg hover:bg-white/10 transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-xl"
           >
             Download Resume
-          </a>
+          </a> */}
         </div>
       </GlassCard>
     </ScrollReveal>

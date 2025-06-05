@@ -1,15 +1,7 @@
-import { meta, shopify, starbucks, tesla,amazon, personalProjectIcon, razorpay } from "../assets/images";
+import { wizcommerce } from "../assets/images";
 import {
-    realtimeCodeEditorIcon,
-    fileSharingAppIcon,
-    moneyzoldIcon,
-    careCarRentalIcon,
-    dockerNodeAppIcon,
-    codeGenieIcon,
-    car,
     contact,
     css,
-    estate,
     express,
     git,
     github,
@@ -21,18 +13,12 @@ import {
     mui,
     nextjs,
     nodejs,
-    pricewise,
     react,
     redux,
-    sass,
-    snapgram,
-    summiz,
     tailwindcss,
-    threads,
     typescript,
     golang,
     docker,
-    kubernets,
     aws
 } from "../assets/icons";
 export const skills = [
@@ -101,11 +87,6 @@ export const skills = [
         name: "Redux",
         type: "State Management",
     },
-    // {
-    //     imageUrl: sass,
-    //     name: "Sass",
-    //     type: "Frontend",
-    // },
     {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
@@ -134,66 +115,11 @@ export const skills = [
     
 ];
 
-// export const experiences = [
-//     {
-//         title: "React.js Developer",
-//         company_name: "Starbucks",
-//         icon: starbucks,
-//         iconBg: "#accbe1",
-//         date: "March 2020 - April 2021",
-//         points: [
-//             "Developing and maintaining web applications using React.js and other related technologies.",
-//             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-//             "Implementing responsive design and ensuring cross-browser compatibility.",
-//             "Participating in code reviews and providing constructive feedback to other developers.",
-//         ],
-//     },
-//     {
-//         title: "React Native Developer",
-//         company_name: "Tesla",
-//         icon: tesla,
-//         iconBg: "#fbc3bc",
-//         date: "Jan 2021 - Feb 2022",
-//         points: [
-//             "Developing and maintaining web applications using React.js and other related technologies.",
-//             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-//             "Implementing responsive design and ensuring cross-browser compatibility.",
-//             "Participating in code reviews and providing constructive feedback to other developers.",
-//         ],
-//     },
-//     {
-//         title: "Web Developer",
-//         company_name: "Shopify",
-//         icon: shopify,
-//         iconBg: "#b7e4c7",
-//         date: "Jan 2022 - Jan 2023",
-//         points: [
-//             "Developing and maintaining web applications using React.js and other related technologies.",
-//             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-//             "Implementing responsive design and ensuring cross-browser compatibility.",
-//             "Participating in code reviews and providing constructive feedback to other developers.",
-//         ],
-//     },
-//     {
-//         title: "Full stack Developer",
-//         company_name: "Meta",
-//         icon: meta,
-//         iconBg: "#a2d2ff",
-//         date: "Jan 2023 - Present",
-//         points: [
-//             "Developing and maintaining web applications using React.js and other related technologies.",
-//             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-//             "Implementing responsive design and ensuring cross-browser compatibility.",
-//             "Participating in code reviews and providing constructive feedback to other developers.",
-//         ],
-//     },
-// ];
-
 export const experiences = [
     {
         title: "Software Engineer Intern",
         company_name: "Wizcommerce",
-        icon: razorpay,
+        icon: wizcommerce,
         iconBg: "#f3f4f6",
         date: "July 2024 - Present",
         points: [
@@ -226,47 +152,33 @@ export const socialLinks = [
 ];
 
 export const projects = [
+    
     {
-        iconUrl: realtimeCodeEditorIcon, 
-        theme: 'btn-back-blue',
-        name: 'Realtime Code Editor',
-        description: 'Developed a collaborative real-time code editor using Socket.io and React.js, enabling multiple users to write and edit code simultaneously.',
-        link: 'https://github.com/007aneesh', 
-        tags: ['temp']
-    },
-    {
-        iconUrl: fileSharingAppIcon, 
-        theme: 'btn-back-green',
-        name: 'File Sharing App',
-        description: 'Built a secure file-sharing web app that allows users to upload and share files with an expiration time, ensuring privacy and security.',
-        link: 'https://github.com/007aneesh', 
-    },
-    {
-        iconUrl: moneyzoldIcon, 
         theme: 'btn-back-yellow',
-        name: 'MoneyZold Finance App',
-        description: 'Developed a finance app using Flutter that tracks expenses and savings, offering users a simple and intuitive way to manage their finances.',
-        link: 'https://github.com/007aneesh', 
+        name: 'Vital Vault - Healthcare Data Management System',
+        description: 'Vital Vault is a secure and scalable healthcare data management system that ensures privacy and efficiency in handling medical records. This backend service is built using Node.js, Express.js, PostgreSQL, and Prisma ORM, with a config-based multi-tenant system and AI-powered voice transcription.',
+        link: 'https://vital-vault-plus.vercel.app/', 
+        tags: ['Full Stack']
     },
     {
-        iconUrl: careCarRentalIcon, 
         theme: 'btn-back-red',
-        name: 'Care Car Rental Website',
-        description: 'Overhauled and relaunched the Care car rental website, streamlining the booking process and improving user experience through an intuitive interface.',
-        link: 'https://github.com/007aneesh', 
+        name: 'Chatify',
+        description: 'Chatify is a Firebase maintained real time chat Application that allows users to chat and send images securely.',
+        link: 'https://github.com/007aneesh/chatify', 
+        tags: ['Frontend']
     },
     {
-        iconUrl: dockerNodeAppIcon, 
-        theme: 'btn-back-black',
-        name: 'Dockerized Node.js Application',
-        description: 'Created a Dockerized Node.js application, pushing the image to DockerHub for easy deployment, demonstrating skills in containerization.',
-        link: 'https://github.com/007aneesh', 
+        theme: 'btn-back-blue',
+        name: 'AI Call Agent',
+        description: 'AI Call Agent is an intelligent voice assistant that handles appointment scheduling via phone calls. It interacts with users in real-time, processes speech-to-text conversion, extracts booking details, and schedules appointments using an AI-driven conversation flow.',
+        link: 'https://github.com/007aneesh/ai-call-agent', 
+        tags: ['Artificial Intelligence']
     },
     {
-        iconUrl: codeGenieIcon, 
-        theme: 'btn-back-purple',
-        name: 'CodeGenie',
-        description: 'Developed a Python code generation tool that automates the creation of functions, classes, exceptions, and machine learning/NLP components, ensuring well-structured, PEP 8-compliant code.',
-        link: 'https://github.com/007aneesh',
-    }    
+        theme: 'btn-back-green',
+        name: 'Documentation Chatbot',
+        description: 'Documentation Chatbot built with Streamlit and Google Generative AI. It helps users query specific documentation datasets and provides responses strictly based on the selected documentation source.',
+        link: 'https://github.com/007aneesh/web-chatbot', 
+        tags: ['Artificial Intelligence']
+    },
 ];

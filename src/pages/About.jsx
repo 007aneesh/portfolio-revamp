@@ -20,38 +20,25 @@ const About = () => {
   const education = [
     {
       degree: "Bachelor of Technology in Computer Science",
-      institution: "Manipal University Jaipur",
-      date: "2020 - 2024",
-      description: "Focused on machine learning, data structures, and full-stack development. Maintained a strong academic record with an 8.5 CGPA.",
+      institution: "Chitkara University, Punjab",
+      date: "2021 - 2025",
+      description: "Focused on data structures, full-stack development and databases. Maintained a strong academic record with an 9.23 CGPA.",
       iconBg: "#e6f0ff"
-    },
-    {
-      degree: "Machine Learning Specialization",
-      institution: "Amazon Machine Learning Summer School",
-      date: "July 2024",
-      description: "Selected among top 5% of 85,000 applicants. Gained expertise in deep learning and reinforcement learning algorithms.",
-      iconBg: "#ffeee6"
     }
   ];
 
   // Achievements data
   const achievements = [
     {
-      title: "First Position in College Hackathon",
+      title: "Third Position in College Hackathon",
       date: "2023",
-      description: "Developed an AI-powered solution for healthcare diagnostics, winning first place among 50+ teams.",
+      description: "Developed an AI-powered call agent for appointment booking.",
       iconBg: "#e6fff0"
-    },
-    {
-      title: "Google Cloud Certification",
-      date: "2022",
-      description: "Achieved professional-level certification in Google Cloud Platform, demonstrating expertise in cloud architecture and deployment.",
-      iconBg: "#f0e6ff"
     },
     {
       title: "Open Source Contributor",
       date: "2021 - Present",
-      description: "Active contributor to multiple open-source projects with over 50+ contributions on GitHub.",
+      description: "Active contributor to multiple open-source projects with over 20+ contributions on GitHub.",
       iconBg: "#ffe6e6"
     }
   ];
@@ -199,7 +186,7 @@ const About = () => {
   };
 
   return (
-    <div className="overflow-y-auto overflow-x-hidden">
+    <div className="overflow-y-auto overflow-x-hidden pb-10">
       <AnimatedBackground>
         <section className="w-full pt-28 px-8">
           <div className="max-w-6xl mx-auto">
@@ -334,8 +321,8 @@ const About = () => {
                     </svg>
                     GitHub
                   </a>
-                  <a
-                    href="https://drive.google.com/uc?id=1DB4Z1-gKTDQ6Q1_l-BkJhRXuBo1LOs15&export=download"
+                  {/* <a
+                    href=""
                     download
                     className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
                   >
@@ -345,7 +332,7 @@ const About = () => {
                       <line x1="12" y1="15" x2="12" y2="3"></line>
                     </svg>
                     Resume
-                  </a>
+                  </a> */}
                 </div>
               </GlassCard>
             </ScrollReveal>

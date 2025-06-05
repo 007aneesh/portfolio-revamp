@@ -249,9 +249,9 @@ const Home = () => {
                 <GlassCard className="p-8 mb-12 hover:shadow-blue-500/20 hover:shadow-lg transition-all duration-500">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-4">Realtime Code Editor</h3>
+                      <h3 className="text-2xl font-bold text-white mb-4">AI Call Agent</h3>
                       <p className="text-white/70 mb-6">
-                        A collaborative real-time code editor using Socket.io and React.js, enabling multiple users to write and edit code simultaneously.
+                        AI Call Agent is an intelligent voice assistant that handles appointment scheduling via phone calls. It interacts with users in real-time, processes speech-to-text conversion, extracts booking details, and schedules appointments using an AI-driven conversation flow.
                       </p>
                       <Link
                         to="/projects"

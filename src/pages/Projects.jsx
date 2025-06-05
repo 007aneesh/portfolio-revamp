@@ -27,7 +27,7 @@ const Projects = () => {
   const allTags = ["All", ...new Set(projects.flatMap(project => project.tags))];
 
   return (
-    <div className="overflow-y-auto overflow-x-hidden">
+    <div className="overflow-y-auto overflow-x-hidden pb-10">
       <AnimatedBackground>
         <section className="w-full pt-28 px-8">
           <div className="max-w-6xl mx-auto">
