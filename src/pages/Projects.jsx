@@ -46,7 +46,7 @@ const Projects = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
-                Explore my portfolio of web applications, machine learning projects, and more
+                Explore my portfolio of web applications and more
               </motion.p>
             </ScrollReveal>
 
@@ -89,8 +89,9 @@ const Projects = () => {
                       {/* Project Image */}
                       <div className="relative overflow-hidden rounded-t-lg h-48">
                         <img
-                          src={project.image}
+                          src={project.image || "https://images-bucket.vercel.app/portfolio/fallback.webp"}
                           alt={project.name}
+                          fallbackSrc="https://images-bucket.vercel.app/portfolio/fallback.webp"
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                         

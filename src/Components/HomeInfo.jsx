@@ -39,7 +39,7 @@ const renderContent = {
   ),
   2: (
     <InfoBox
-      text="I've worked with leading companies and built a diverse skill set in web development, cloud technologies, and machine learning."
+      text="I've built a diverse skill set in web development and cloud technologies"
       link="/about"
       btnText="Learn more"
     />

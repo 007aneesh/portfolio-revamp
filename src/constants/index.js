@@ -126,8 +126,9 @@ export const experiences = [
             "Reduced database load by 30% by eliminating unnecessary API requests, improving system efficiency.",
             "Fixed multiple critical bugs, leading to a 20% improvement in overall system stability.",
             "Leveraged user-centric design principles to create intuitive features, boosting user satisfaction by 30%.",
-            "Conducted A/B testing (split experimentation) and performed monitoring/instrumentation to enhance user experience based on merchant IDs.",
-            "Collaborated with cross-functional teams to develop highly responsive web applications using React.js and TypeScript."
+            "Spearheaded end-to-end product development to streamline workflows resulting in a 25% faster go-to-market for websites.",
+            "Collaborated with cross-functional teams to develop highly responsive web applications using React.js and TypeScript.",
+            "Built a JSON-driven rule engine to handle complex cart discount calculations and validations, improving checkout efficiency and boosting overall performance by 30%."
         ],
     }
 ];

@@ -30,12 +30,6 @@ const About = () => {
   // Achievements data
   const achievements = [
     {
-      title: "Third Position in College Hackathon",
-      date: "2023",
-      description: "Developed an AI-powered call agent for appointment booking.",
-      iconBg: "#e6fff0"
-    },
-    {
       title: "Open Source Contributor",
       date: "2021 - Present",
       description: "Active contributor to multiple open-source projects with over 20+ contributions on GitHub.",

@@ -201,7 +201,7 @@ const Home = () => {
                 </h2>
               </ScrollReveal>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
                 {[
                   {
                     title: "Frontend Development",
@@ -212,11 +212,6 @@ const Home = () => {
                     title: "Backend Engineering",
                     description: "Building scalable APIs and server-side applications using Node.js, Express, and cloud technologies.",
                     icon: "⚙️"
-                  },
-                  {
-                    title: "Machine Learning",
-                    description: "Implementing data-driven solutions with Python and modern ML frameworks for real-world applications.",
-                    icon: "🧠"
                   }
                 ].map((service, index) => (
                   <ScrollReveal
