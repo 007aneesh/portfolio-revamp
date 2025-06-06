@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import AnimatedBackground from "../Components/AnimatedBackground";
 import ScrollReveal from "../Components/ScrollReveal";
 import GlassCard from "../Components/GlassCard";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -25,19 +26,24 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      // Simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      console.log("Form submitted:", formData);
-      
-      // Reset form
+      // Send email using EmailJS
+      await emailjs.send(
+        "service_cy33g4v", // Replace with your EmailJS service ID
+        "template_fwbk3pq", // Replace with your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        "A8UPx1yBOk-IkwdmM" // Replace with your EmailJS public key
+      );
+
       setFormData({ name: "", email: "", message: "" });
       setSubmitStatus({
         success: true,
         message: "Thanks for your message! I'll get back to you soon.",
       });
-      
-      // Reset status after 5 seconds
+
       setTimeout(() => {
         setSubmitStatus(null);
       }, 5000);
