@@ -46,7 +46,14 @@ const Projects = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
-                Explore my portfolio of web applications and more
+                Explore my portfolio of some of my web applications and more on my <a
+                              href='https://github.com/007aneesh'
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-400 hover:text-blue-300 transition-colors"
+                            >
+                              Github
+                            </a>
               </motion.p>
             </ScrollReveal>
 

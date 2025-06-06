@@ -158,28 +158,31 @@ export const projects = [
         theme: 'btn-back-yellow',
         name: 'Vital Vault - Healthcare Data Management System',
         description: 'Vital Vault is a secure and scalable healthcare data management system that ensures privacy and efficiency in handling medical records. This backend service is built using Node.js, Express.js, PostgreSQL, and Prisma ORM, with a config-based multi-tenant system and AI-powered voice transcription.',
-        link: 'https://vital-vault-plus.vercel.app/', 
-        tags: ['Full Stack']
+        demo_link: 'https://vital-vault-plus.vercel.app/', 
+        tags: ['Full Stack'],
+        source_code_link: 'https://github.com/007aneesh/vital-vault-backend'
     },
     {
         theme: 'btn-back-red',
         name: 'Chatify',
         description: 'Chatify is a Firebase maintained real time chat Application that allows users to chat and send images securely.',
-        link: 'https://github.com/007aneesh/chatify', 
-        tags: ['Frontend']
+        source_code_link: 'https://github.com/007aneesh/chatify', 
+        tags: ['Frontend'],
+        demo_link: 'https://chatify-beta.vercel.app/'
     },
     {
         theme: 'btn-back-blue',
         name: 'AI Call Agent',
         description: 'AI Call Agent is an intelligent voice assistant that handles appointment scheduling via phone calls. It interacts with users in real-time, processes speech-to-text conversion, extracts booking details, and schedules appointments using an AI-driven conversation flow.',
-        link: 'https://github.com/007aneesh/ai-call-agent', 
+        source_code_link: 'https://github.com/007aneesh/ai-call-agent', 
         tags: ['Artificial Intelligence']
     },
     {
         theme: 'btn-back-green',
         name: 'Documentation Chatbot',
         description: 'Documentation Chatbot built with Streamlit and Google Generative AI. It helps users query specific documentation datasets and provides responses strictly based on the selected documentation source.',
-        link: 'https://github.com/007aneesh/web-chatbot', 
-        tags: ['Artificial Intelligence']
+        source_code_link: 'https://github.com/007aneesh/web-chatbot', 
+        tags: ['Artificial Intelligence'],
+        demo_link: 'https://aneesh-chatbot.streamlit.app/'
     },
 ];
