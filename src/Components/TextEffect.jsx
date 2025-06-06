@@ -195,11 +195,11 @@ const TextEffect = () => {
   
   return (
     <div className="text-effect-container relative z-30 bg-transparent">
-      <div className="mb-4 overflow-hidden bg-transparent">
+      <div className="md:mb-4 overflow-hidden bg-transparent">
         <AnimatedText 
           text="I'm Aneesh Aggarwal" 
           type="character" 
-          className="text-4xl md:text-6xl font-bold text-white" 
+          className="text-2xl md:text-6xl font-bold text-white" 
           delay={0.5}
           staggerDelay={0.05}
         />
@@ -208,9 +208,9 @@ const TextEffect = () => {
       <div className="overflow-hidden bg-transparent">
         <AnimatedText 
           text="Full Stack Developer & Software Engineer" 
-          type="split-words" 
-          className="text-xl md:text-2xl text-blue-300 mb-4" 
-          delay={1.5}
+          type="character" 
+          className="text-sm md:text-2xl text-white mb-4" 
+          delay={1.0}
           duration={0.7}
           staggerDelay={0.06}
         />
