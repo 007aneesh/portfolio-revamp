@@ -117,11 +117,25 @@ export const skills = [
 
 export const experiences = [
     {
+        title: "Software Engineer I",
+        company_name: "Wizcommerce",
+        icon: wizcommerce,
+        iconBg: "#f3f4f6",
+        date: "July 2025 - Present",
+        points: [
+            "Driving migration from React to a PHP-based ecosystem, ensuring backward compatibility, zero downtime, and optimized performance for enterprise clients.",
+            "Leading development of a core B2B product, increasing release velocity by 30% through efficient sprint planning, execution and taking ownership of architecture decisions",
+            "Contributed to product roadmap planning and led feature development across teams, impacting 30+ clients.",
+            "Customized WordPress components and plugins, enhancing marketing automation and SEO-driven content delivery.",
+            "Mentored peers on React best practices and code quality, fostering a culture of clean, modular, and efficient development."
+        ],
+    },
+    {
         title: "Software Engineer Intern",
         company_name: "Wizcommerce",
         icon: wizcommerce,
         iconBg: "#f3f4f6",
-        date: "July 2024 - Present",
+        date: "July 2024 - June 2025",
         points: [
             "Reduced database load by 30% by eliminating unnecessary API requests, improving system efficiency.",
             "Fixed multiple critical bugs, leading to a 20% improvement in overall system stability.",
