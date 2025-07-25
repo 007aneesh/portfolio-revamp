@@ -38,8 +38,8 @@ const About = () => {
   ];
 
   // Section to render based on active tab
-  const renderTabContent = () => {
-    switch(activeTab) {
+  const renderTabContent = (activeTabProp) => {
+    switch(activeTabProp) {
       case "experience":
         return (
           <div className="mt-12">
@@ -284,7 +284,7 @@ const About = () => {
                   </div>
                 </div>
                 
-                {renderTabContent()}
+                {renderTabContent(activeTab)}
               </div>
             </ScrollReveal>
 
