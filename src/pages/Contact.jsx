@@ -59,7 +59,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="overflow-y-auto overflow-x-hidden">
+    <div className="overflow-x-clip">
       <AnimatedBackground>
         <section className="w-full pt-28 px-8 pb-10">
           <div className="max-w-6xl mx-auto">

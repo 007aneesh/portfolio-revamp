@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Suspense, useRef } from "react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 // New components
 import HeroAnimation from "../Components/HeroAnimation";
@@ -18,14 +18,6 @@ const Home = () => {
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
   const [audioElement] = useState(new Audio(sakura));
   const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
-  });
-
-  // Parallax effect for hero section
-  const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   // Handle music playback
   useEffect(() => {
@@ -88,13 +80,12 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden bg-transparent text-white">
+    <div className="min-h-screen w-full overflow-x-clip bg-transparent text-white">
       <AnimatedBackground>
         <div ref={containerRef} className="relative w-full bg-transparent">
           {/* Hero Section */}
           <motion.section
             className="relative h-screen flex flex-col items-center justify-center px-4 bg-transparent"
-            style={{ y, opacity }}
           >
             {/* 3D Animation */}
             <div className="absolute inset-0 w-full h-full z-10">
@@ -134,6 +125,17 @@ const Home = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </Link>
+                  <a
+                    href="/AneeshKumar_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-8 py-4 bg-transparent border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-xl flex items-center justify-center gap-2"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <span>Download Resume</span>
+                  </a>
                   <Link
                     to="/contact"
                     className="px-8 py-4 bg-transparent border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-xl"
@@ -201,17 +203,22 @@ const Home = () => {
                 </h2>
               </ScrollReveal>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center">
                 {[
                   {
-                    title: "Frontend Development",
-                    description: "Creating responsive, performant user interfaces with React, Next.js, and modern CSS frameworks.",
+                    title: "Frontend Engineering",
+                    description: "Responsive, accessible, performance-tuned UIs with React, Next.js, and Redux — shipped to 50+ enterprise clients at WizCommerce.",
                     icon: "🎨"
                   },
                   {
-                    title: "Backend Engineering",
-                    description: "Building scalable APIs and server-side applications using Node.js, Express, and cloud technologies.",
+                    title: "Backend & Systems",
+                    description: "Scalable APIs with Node.js, Hono, and Go. Comfortable with Redis, BullMQ queues, Elasticsearch, and webhook-driven pipelines.",
                     icon: "⚙️"
+                  },
+                  {
+                    title: "System Design",
+                    description: "Architecting monorepos with clean provider boundaries, concurrency-safe state machines, and observability baked in from day one.",
+                    icon: "🧩"
                   }
                 ].map((service, index) => (
                   <ScrollReveal
@@ -244,24 +251,37 @@ const Home = () => {
                 <GlassCard className="p-8 mb-12 hover:shadow-blue-500/20 hover:shadow-lg transition-all duration-500">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-4">AI Call Agent</h3>
+                      <div className="inline-block px-3 py-1 mb-3 text-xs font-semibold uppercase tracking-wider text-blue-300 bg-blue-500/10 border border-blue-500/30 rounded-full">
+                        Flagship Project
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-4">CasaLux — Luxury Short-Term Rental Platform</h3>
                       <p className="text-white/70 mb-6">
-                        AI Call Agent is an intelligent voice assistant that handles appointment scheduling via phone calls. It interacts with users in real-time, processes speech-to-text conversion, extracts booking details, and schedules appointments using an AI-driven conversation flow.
+                        A Turborepo monorepo spanning 4 apps and 8 shared packages, with a DI container enabling one-line provider swaps (Stripe ↔ Razorpay, Cloudinary ↔ S3). Booking concurrency handled via Redis distributed locks over a 21-model Prisma schema, a webhook-driven Stripe pipeline with BullMQ workers, and Elasticsearch 8.x geo-faceted search.
                       </p>
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {['TypeScript', 'Hono', 'Prisma', 'Redis', 'Stripe', 'Elasticsearch', 'BullMQ'].map((t) => (
+                          <span key={t} className="text-xs text-blue-200 bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded-md">{t}</span>
+                        ))}
+                      </div>
                       <Link
                         to="/projects"
                         className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 group"
                       >
-                        <span>View Project</span>
+                        <span>View All Projects</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="transition-transform duration-300 transform group-hover:translate-x-1">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                       </Link>
                     </div>
-                    <div className="aspect-video bg-blue-900/30 rounded-lg overflow-hidden">
-                      {/* Project Preview Image or Animation could go here */}
-                      <div className="w-full h-full flex items-center justify-center text-white/30 text-sm">
-                        Project Preview
+                    <div className="aspect-video bg-gradient-to-br from-blue-900/40 via-purple-900/30 to-blue-900/40 rounded-lg overflow-hidden relative border border-blue-500/20">
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="grid grid-cols-3 gap-3 p-6 opacity-80">
+                          {['🏡', '🔐', '💳', '🔍', '⚡', '📦', '🗺️', '✉️', '📊'].map((emoji, i) => (
+                            <div key={i} className="w-14 h-14 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-2xl backdrop-blur-sm">
+                              {emoji}
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>

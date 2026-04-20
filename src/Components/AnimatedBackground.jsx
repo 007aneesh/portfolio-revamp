@@ -359,59 +359,34 @@ const AnimatedBackground = ({ children }) => {
       }, 150);
     };
     
-    // Scroll handler to reposition canvas
-    const handleScroll = () => {
-      // We'll use CSS transform for performance instead of repositioning
-      if (canvas) {
-        canvas.style.transform = `translateY(${window.scrollY}px)`;
-      }
-    };
-    
     // Initialize
     updateDimensions();
-    fillBackground(); // Ensure the background is filled immediately
+    fillBackground();
     window.addEventListener('resize', updateDimensions);
     window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('scroll', handleScroll);
-    
-    // Start animation and meteors
+
     animate();
     createMeteor();
-    
-    // Cleanup
+
     return () => {
       window.removeEventListener('resize', updateDimensions);
       window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
   
-  // Apply subtle parallax effect to container based on mouse position
-  const parallaxStyle = {
-    transform: `perspective(1000px) rotateX(${mousePosition.y * -2}deg) rotateY(${mousePosition.x * 2}deg)`,
-    transition: 'transform 0.2s ease-out'
-  };
-  
   return (
-    <div ref={containerRef} className="relative w-full min-h-screen bg-[#020617] overflow-hidden">
-      <canvas 
-        ref={canvasRef} 
+    <div ref={containerRef} className="relative w-full min-h-screen bg-[#020617]">
+      <canvas
+        ref={canvasRef}
         className="fixed top-0 left-0 w-full h-screen pointer-events-none"
-        style={{ 
+        style={{
           background: 'linear-gradient(to bottom, #020617, #0f172a)',
           willChange: 'transform',
           zIndex: 0,
-          overflow: 'hidden' // Add overflow hidden to prevent scrollbars
         }}
       />
-      
-      <div 
-        className="relative w-full overflow-visible"
-        style={{
-          ...parallaxStyle,
-          zIndex: 1
-        }}
-      >
+
+      <div className="relative w-full" style={{ zIndex: 1 }}>
         {children}
       </div>
     </div>

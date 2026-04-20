@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { skills, experiences } from "../constants";
+import { skillCategories, experiences } from "../constants";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -19,10 +19,10 @@ const About = () => {
   // Education data
   const education = [
     {
-      degree: "Bachelor of Technology in Computer Science",
+      degree: "B.E. in Computer Science",
       institution: "Chitkara University, Punjab",
-      date: "2021 - 2025",
-      description: "Focused on data structures, full-stack development and databases. Maintained a strong academic record with an 9.23 CGPA.",
+      date: "Sep 2021 - Jul 2025",
+      description: "Graduated with a 9.21/10 CGPA. Focused on data structures, system design, full-stack development, and databases.",
       iconBg: "#e6f0ff"
     }
   ];
@@ -30,9 +30,15 @@ const About = () => {
   // Achievements data
   const achievements = [
     {
+      title: "Academic Distinction — 9.21 / 10 CGPA",
+      date: "2021 - 2025",
+      description: "Graduated B.E. in Computer Science from Chitkara University with a 9.21/10 CGPA, placing in the top of the cohort.",
+      iconBg: "#ffe6e6"
+    },
+    {
       title: "Open Source Contributor",
       date: "2021 - Present",
-      description: "Active contributor to multiple open-source projects with over 20+ contributions on GitHub.",
+      description: "Active on GitHub — contributing to personal side projects and small OSS fixes across the JS/TS ecosystem.",
       iconBg: "#ffe6e6"
     }
   ];
@@ -180,7 +186,7 @@ const About = () => {
   };
 
   return (
-    <div className="overflow-y-auto overflow-x-hidden pb-10">
+    <div className="overflow-x-clip pb-10">
       <AnimatedBackground>
         <section className="w-full pt-28 px-8">
           <div className="max-w-6xl mx-auto">
@@ -206,8 +212,8 @@ const About = () => {
                     transition={{ delay: 0.2, duration: 0.5 }}
                   >
                     <p>
-                      Full Stack Developer & Software Engineer based in India, with a passion for creating 
-                      innovative web applications and solving complex problems through code.
+                      Software Engineer at <span className="text-blue-400 font-medium">WizCommerce</span> building B2B eCommerce SaaS — shipping production features for 50+ enterprise clients.
+                      I care about performance, clean architecture, and writing code that scales. Currently obsessed with distributed systems, payment infrastructure, and developer tooling.
                     </p>
                   </motion.div>
                 </div>
@@ -216,29 +222,33 @@ const About = () => {
 
             {/* Skills Section */}
             <ScrollReveal animation="fade">
-              <div className="w-full max-w-4xl mx-auto mb-16">
-                <h2 className="text-3xl font-bold text-white mb-8 text-center">My Skills</h2>
-                
-                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 justify-items-center">
-                  {skills.map((skill, index) => (
-                    <ScrollReveal
-                      key={skill.name}
-                      animation="scale"
-                      delay={index * 0.05}
-                    >
-                      <div className="flex flex-col items-center group">
-                        <div className="w-16 h-16 rounded-xl flex justify-center items-center bg-[#0f172a]/60 backdrop-blur-sm shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-110 border border-blue-500/20">
-                          <img
-                            src={skill.imageUrl}
-                            alt={skill.name}
-                            className="w-8 h-8 object-contain"
-                          />
-                        </div>
-                        <span className="mt-2 text-sm text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          {skill.name}
-                        </span>
+              <div className="w-full max-w-5xl mx-auto mb-16">
+                <h2 className="text-3xl font-bold text-white mb-2 text-center">Tech Stack</h2>
+                <p className="text-gray-400 text-center mb-10">Tools I reach for to ship production-grade software.</p>
+
+                <div className="space-y-8">
+                  {skillCategories.map((group) => (
+                    <div key={group.category} className="bg-[#0f172a]/40 backdrop-blur-sm border border-blue-500/10 rounded-2xl p-6">
+                      <h3 className="text-sm font-semibold uppercase tracking-wider text-blue-300 mb-4">
+                        {group.category}
+                      </h3>
+                      <div className="flex flex-wrap gap-3">
+                        {group.items.map((skill) => (
+                          <div
+                            key={skill.name}
+                            className="flex items-center gap-2 px-3 py-2 bg-[#0f172a]/70 border border-blue-500/20 rounded-lg hover:border-blue-400/60 hover:bg-[#0f172a] transition-all duration-200 group"
+                          >
+                            <img
+                              src={skill.imageUrl}
+                              alt={skill.name}
+                              className="w-5 h-5 object-contain"
+                              onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                            />
+                            <span className="text-sm text-gray-200 group-hover:text-white">{skill.name}</span>
+                          </div>
+                        ))}
                       </div>
-                    </ScrollReveal>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -315,8 +325,10 @@ const About = () => {
                     </svg>
                     GitHub
                   </a>
-                  {/* <a
-                    href=""
+                  <a
+                    href="/AneeshKumar_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     download
                     className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
                   >
@@ -326,7 +338,7 @@ const About = () => {
                       <line x1="12" y1="15" x2="12" y2="3"></line>
                     </svg>
                     Resume
-                  </a> */}
+                  </a>
                 </div>
               </GlassCard>
             </ScrollReveal>

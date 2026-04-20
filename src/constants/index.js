@@ -21,132 +21,86 @@ import {
     docker,
     aws
 } from "../assets/icons";
-export const skills = [
+
+const dev = (name) => `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${name}`;
+
+export const skillCategories = [
     {
-        imageUrl: css,
-        name: "CSS",
-        type: "Frontend",
+        category: "Languages",
+        items: [
+            { name: "TypeScript", imageUrl: dev("typescript/typescript-original.svg") },
+            { name: "JavaScript", imageUrl: dev("javascript/javascript-original.svg") },
+            { name: "Python", imageUrl: dev("python/python-original.svg") },
+            { name: "SQL", imageUrl: dev("mysql/mysql-original.svg") },
+            { name: "C++", imageUrl: dev("cplusplus/cplusplus-original.svg") },
+        ],
     },
     {
-        imageUrl: express,
-        name: "Express",
-        type: "Backend",
+        category: "Frameworks & Libraries",
+        items: [
+            { name: "React", imageUrl: dev("react/react-original.svg") },
+            { name: "Next.js", imageUrl: dev("nextjs/nextjs-original.svg") },
+            { name: "React Native", imageUrl: dev("react/react-original.svg") },
+            { name: "Redux", imageUrl: dev("redux/redux-original.svg") },
+            { name: "Node.js", imageUrl: dev("nodejs/nodejs-original.svg") },
+            { name: "Express", imageUrl: dev("express/express-original.svg") },
+            { name: "Hono", imageUrl: "https://hono.dev/images/logo.svg" },
+            { name: "FastAPI", imageUrl: dev("fastapi/fastapi-original.svg") },
+            { name: "Tailwind CSS", imageUrl: dev("tailwindcss/tailwindcss-original.svg") },
+        ],
     },
     {
-        imageUrl: git,
-        name: "Git",
-        type: "Version Control",
+        category: "Databases & Caching",
+        items: [
+            { name: "PostgreSQL", imageUrl: dev("postgresql/postgresql-original.svg") },
+            { name: "MySQL", imageUrl: dev("mysql/mysql-original.svg") },
+            { name: "MongoDB", imageUrl: dev("mongodb/mongodb-original.svg") },
+            { name: "Redis", imageUrl: dev("redis/redis-original.svg") },
+            { name: "Elasticsearch", imageUrl: dev("elasticsearch/elasticsearch-original.svg") },
+            { name: "Prisma", imageUrl: dev("prisma/prisma-original.svg") },
+        ],
     },
     {
-        imageUrl: github,
-        name: "GitHub",
-        type: "Version Control",
+        category: "Cloud & DevOps",
+        items: [
+            { name: "AWS", imageUrl: dev("amazonwebservices/amazonwebservices-plain-wordmark.svg") },
+            { name: "Docker", imageUrl: dev("docker/docker-original.svg") },
+            { name: "Jenkins", imageUrl: dev("jenkins/jenkins-original.svg") },
+            { name: "Turborepo", imageUrl: "https://cdn.simpleicons.org/turborepo/white" },
+            { name: "BullMQ", imageUrl: dev("redis/redis-original.svg") },
+        ],
     },
     {
-        imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
+        category: "Tools & Observability",
+        items: [
+            { name: "Git", imageUrl: dev("git/git-original.svg") },
+            { name: "GitHub", imageUrl: dev("github/github-original.svg") },
+            { name: "Postman", imageUrl: dev("postman/postman-original.svg") },
+            { name: "Webpack", imageUrl: dev("webpack/webpack-original.svg") },
+            { name: "Sentry", imageUrl: "https://cdn.worldvectorlogo.com/logos/sentry-3.svg" },
+        ],
     },
-    {
-        imageUrl: javascript,
-        name: "JavaScript",
-        type: "Frontend",
-    },
-    {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
-    },
-    {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
-    },
-    {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
-    },
-    {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: tailwindcss,
-        name: "Tailwind CSS",
-        type: "Frontend",
-    },
-    {
-        imageUrl: typescript,
-        name: "TypeScript",
-        type: "Frontend",
-    },
-    {
-        imageUrl: golang,
-        name:"GoLang",
-        type: "Backend",
-    },
-    {
-        imageUrl: docker,
-        name:"Docker",
-        type: "Backend",
-    },
-    {
-        imageUrl: aws,
-        name:"AWS",
-        type: "Cloud",
-    },
-    
 ];
+
+// Flat list kept for backwards compatibility (if imported elsewhere)
+export const skills = skillCategories.flatMap((g) => g.items);
 
 export const experiences = [
     {
-        title: "Software Engineer I",
-        company_name: "Wizcommerce",
+        title: "Software Engineer",
+        company_name: "WizCommerce",
         icon: wizcommerce,
         iconBg: "#f3f4f6",
-        date: "July 2025 - Present",
+        date: "July 2024 - Present",
         points: [
-            "Driving migration from React to a PHP-based ecosystem, ensuring backward compatibility, zero downtime, and optimized performance for enterprise clients.",
-            "Leading development of a core B2B product, increasing release velocity by 30% through efficient sprint planning, execution and taking ownership of architecture decisions",
-            "Contributed to product roadmap planning and led feature development across teams, impacting 30+ clients.",
-            "Customized WordPress components and plugins, enhancing marketing automation and SEO-driven content delivery.",
-            "Mentored peers on React best practices and code quality, fostering a culture of clean, modular, and efficient development."
-        ],
-    },
-    {
-        title: "Software Engineer Intern",
-        company_name: "Wizcommerce",
-        icon: wizcommerce,
-        iconBg: "#f3f4f6",
-        date: "July 2024 - June 2025",
-        points: [
-            "Reduced database load by 30% by eliminating unnecessary API requests, improving system efficiency.",
-            "Fixed multiple critical bugs, leading to a 20% improvement in overall system stability.",
-            "Leveraged user-centric design principles to create intuitive features, boosting user satisfaction by 30%.",
-            "Spearheaded end-to-end product development to streamline workflows resulting in a 25% faster go-to-market for websites.",
-            "Collaborated with cross-functional teams to develop highly responsive web applications using React.js and TypeScript.",
-            "Built a JSON-driven rule engine to handle complex cart discount calculations and validations, improving checkout efficiency and boosting overall performance by 30%."
+            "Built the frontend for WizCommerce's JSON Logic-based discount rule engine — a premium-tier feature adopted by 20+ enterprise clients — surfacing 50+ configurable rule types with live cart-state updates.",
+            "Improved LCP by 44% (3.2s → 1.8s) on the product listing route via route-level code splitting, dynamic imports, and image lazy loading — verified in PageSpeed Insights.",
+            "Designed and shipped the wishlist feature end-to-end in Redux — normalized entity state, memoized selectors, and action design across a codebase serving 50+ enterprise clients.",
+            "Led integration of Sentry, Mixpanel, and Klaviyo across the WizCommerce platform — instrumenting 25+ key user events and delivering the first unified view of frontend reliability and funnel behaviour.",
+            "Reduced user-visible AI image generation failures by 38% on WizStudio by implementing frontend retry logic with exponential backoff, error boundaries, and API contract alignment."
         ],
     }
 ];
-
 
 export const socialLinks = [
     {
@@ -167,35 +121,37 @@ export const socialLinks = [
 ];
 
 export const projects = [
-    
+    {
+        theme: 'btn-back-blue',
+        name: 'CasaLux — Luxury Short-Term Rental Platform',
+        description: 'Turborepo monorepo (4 apps, 8 shared packages) with a DI container enabling one-line provider swaps. Built a Redis-locked booking state machine over a 21-model Prisma schema, a webhook-driven Stripe payment pipeline with BullMQ workers, and an Elasticsearch 8.x geo-faceted search layer with dual-tier rate limiting and Clerk RBAC.',
+        image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80',
+        tags: ['Full Stack', 'System Design'],
+        source_code_link: 'https://github.com/007aneesh',
+    },
     {
         theme: 'btn-back-yellow',
-        name: 'Vital Vault - Healthcare Data Management System',
-        description: 'Vital Vault is a secure and scalable healthcare data management system that ensures privacy and efficiency in handling medical records. This backend service is built using Node.js, Express.js, PostgreSQL, and Prisma ORM, with a config-based multi-tenant system and AI-powered voice transcription.',
-        demo_link: 'https://vital-vault-plus.vercel.app/', 
+        name: 'Vital Vault — Healthcare Data Platform',
+        description: 'Secure, multi-tenant healthcare data management system with AI-powered voice transcription. Built with Node.js, Express, PostgreSQL, and Prisma ORM — config-driven tenancy isolates records per clinic.',
+        image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80',
+        demo_link: 'https://vital-vault-plus.vercel.app/',
         tags: ['Full Stack'],
         source_code_link: 'https://github.com/007aneesh/vital-vault-backend'
     },
     {
-        theme: 'btn-back-red',
-        name: 'Chatify',
-        description: 'Chatify is a Firebase maintained real time chat Application that allows users to chat and send images securely.',
-        source_code_link: 'https://github.com/007aneesh/chatify', 
-        tags: ['Frontend'],
-        demo_link: 'https://chatify-beta.vercel.app/'
-    },
-    {
-        theme: 'btn-back-blue',
+        theme: 'btn-back-pink',
         name: 'AI Call Agent',
-        description: 'AI Call Agent is an intelligent voice assistant that handles appointment scheduling via phone calls. It interacts with users in real-time, processes speech-to-text conversion, extracts booking details, and schedules appointments using an AI-driven conversation flow.',
-        source_code_link: 'https://github.com/007aneesh/ai-call-agent', 
+        description: 'Voice assistant that handles appointment scheduling over phone calls — real-time speech-to-text, booking extraction, and AI-driven conversation flow.',
+        image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80',
+        source_code_link: 'https://github.com/007aneesh/ai-call-agent',
         tags: ['Artificial Intelligence']
     },
     {
         theme: 'btn-back-green',
         name: 'Documentation Chatbot',
-        description: 'Documentation Chatbot built with Streamlit and Google Generative AI. It helps users query specific documentation datasets and provides responses strictly based on the selected documentation source.',
-        source_code_link: 'https://github.com/007aneesh/web-chatbot', 
+        description: 'Streamlit + Google Generative AI chatbot that answers strictly from selected documentation sources — retrieval-grounded responses, no hallucinations.',
+        image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1200&q=80',
+        source_code_link: 'https://github.com/007aneesh/web-chatbot',
         tags: ['Artificial Intelligence'],
         demo_link: 'https://aneesh-chatbot.streamlit.app/'
     },

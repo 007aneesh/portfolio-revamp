@@ -65,7 +65,7 @@ const App = () => {
   }, []);
   
   return (
-    <main className="bg-[#020617] text-white relative min-h-screen overflow-hidden">
+    <main className="bg-[#020617] text-white relative min-h-screen overflow-x-clip">
       {isLoading ? (
         <InitialLoader />
       ) : (

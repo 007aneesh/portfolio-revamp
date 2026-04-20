@@ -207,7 +207,7 @@ const TextEffect = () => {
       
       <div className="overflow-hidden bg-transparent">
         <AnimatedText 
-          text="Full Stack Developer & Software Engineer" 
+          text="Software Engineer @ WizCommerce"
           type="character" 
           className="text-sm md:text-2xl text-white mb-4" 
           delay={1.0}
@@ -219,7 +219,7 @@ const TextEffect = () => {
       {animate && (
         <div className="mt-6 overflow-hidden bg-transparent">
           <AnimatedText 
-            text="Building digital experiences that inspire" 
+            text="I build fast, scalable products end-to-end."
             type="glitch" 
             className="text-lg md:text-xl text-gray-300" 
             delay={2}
