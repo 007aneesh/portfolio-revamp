@@ -91,13 +91,23 @@ export const experiences = [
         company_name: "WizCommerce",
         icon: wizcommerce,
         iconBg: "#f3f4f6",
-        date: "July 2024 - Present",
+        date: "July 2025 - Present",
         points: [
-            "Built the frontend for WizCommerce's JSON Logic-based discount rule engine — a premium-tier feature adopted by 20+ enterprise clients — surfacing 50+ configurable rule types with live cart-state updates.",
-            "Improved LCP by 44% (3.2s → 1.8s) on the product listing route via route-level code splitting, dynamic imports, and image lazy loading — verified in PageSpeed Insights.",
-            "Designed and shipped the wishlist feature end-to-end in Redux — normalized entity state, memoized selectors, and action design across a codebase serving 50+ enterprise clients.",
-            "Led integration of Sentry, Mixpanel, and Klaviyo across the WizCommerce platform — instrumenting 25+ key user events and delivering the first unified view of frontend reliability and funnel behaviour.",
-            "Reduced user-visible AI image generation failures by 38% on WizStudio by implementing frontend retry logic with exponential backoff, error boundaries, and API contract alignment."
+            "Co-architected a multi-brand headless storefront platform (React 19, Next.js 16, Node.js, PostgreSQL) with a 4 engineer platform team, compiling merchant-authored JSON into server-rendered React across 87 configurable modules and 800+ routes, letting merchants ship storefront changes with zero redeploys.",
+            "Designed 174 REST APIs on a Node.js REST APIs layer with cookie-based sessions, Redis caching, and typed data-access modules over PostgreSQL/Prisma, isolating per-buyer pricing from a shared multi-tenant cache and keeping tenant credentials out of the browser.",
+            "Modeled the storefront’s page and theme data as versioned JSON documents with draft/publish state machines, designing the schema and query layer so a merchant edit resolves to a rendered page in a single read without joins across 20+ relational tables.",
+            "Improved storefront performance through server-side data resolution and a tag-based cache invalidation hierarchy that shrank a product update’s blast radius from 828 routes to 1 — improving LCP 65% (3.4s → 1.2s) and cutting shopper JS bundle by 35% at 95% cache hit rate.",
+        ],
+    },
+    {
+        title: "Software Engineer Intern",
+        company_name: "WizCommerce",
+        icon: wizcommerce,
+        iconBg: "#f3f4f6",
+        date: "July 2024 - June 2025",
+        points: [
+            "Delivered core storefront features powering 60+ live merchant sites generating $1M+ in annual revenue, including a JSON Logic-based discount rule engine adopted by 20+ enterprise clients.",
+            "Owned SEO and observability across 30+ merchant sites — migrated product-ID URLs to dynamic slugs with structured metadata and canonical tags, and instrumented 25+ key user events (Sentry, Mixpanel, Klaviyo) with alerting thresholds, giving the product team its first unified view of frontend reliability.",
         ],
     }
 ];
