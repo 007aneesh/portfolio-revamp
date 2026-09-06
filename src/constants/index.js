@@ -135,7 +135,7 @@ export const projects = [
         theme: 'btn-back-blue',
         name: 'Aivoy | Multi-tenant AI Concierge SaaS',
         description: 'A multi-tenant AI concierge platform as a single-script embeddable widget (published to npm), reducing integration to under 5 minutes and enabling any site to add streaming AI chat.',
-        image: '/aivoy',
+        image: 'https://aneeshaggarwal.vercel.app/aivoy.png',
         tags: ['Artificial Intelligence', 'NPM'],
         source_code_link: 'https://github.com/007aneesh/aivoy',
     },
