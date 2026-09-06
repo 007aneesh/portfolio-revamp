@@ -136,6 +136,7 @@ export const projects = [
         name: 'Aivoy | Multi-tenant AI Concierge SaaS',
         description: 'A multi-tenant AI concierge platform as a single-script embeddable widget (published to npm), reducing integration to under 5 minutes and enabling any site to add streaming AI chat.',
         image: 'https://aneeshaggarwal.vercel.app/aivoy.png',
+        demo_link: 'https://aivoy.vercel.app/',
         tags: ['Artificial Intelligence', 'NPM'],
         source_code_link: 'https://github.com/007aneesh/aivoy',
     },
@@ -145,6 +146,7 @@ export const projects = [
         description: 'Turborepo monorepo (4 apps, 8 shared packages) with a DI container enabling one-line provider swaps. Built a Redis-locked booking state machine over a 21-model Prisma schema, a webhook-driven Stripe payment pipeline with BullMQ workers, and an Elasticsearch 8.x geo-faceted search layer with dual-tier rate limiting and Clerk RBAC.',
         image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80',
         tags: ['Full Stack', 'System Design'],
+        demo_link: 'https://casalux-web.vercel.app/',
         source_code_link: 'https://github.com/007aneesh/casalux',
     },
     {
