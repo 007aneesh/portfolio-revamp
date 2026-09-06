@@ -326,7 +326,7 @@ const About = () => {
                     GitHub
                   </a>
                   <a
-                    href="/AneeshKumar_Resume.pdf"
+                    href="/aneesh_resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     download
