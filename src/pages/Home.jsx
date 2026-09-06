@@ -126,7 +126,7 @@ const Home = () => {
                     </svg>
                   </Link>
                   <a
-                    href="/AneeshKumar_Resume.pdf"
+                    href="/aneesh_resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-8 py-4 bg-transparent border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-xl flex items-center justify-center gap-2"
